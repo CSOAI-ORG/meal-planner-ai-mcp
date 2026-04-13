@@ -1,0 +1,10 @@
+name: meal-planner-ai-mcp
+description: "MEOK AI Labs — Meal Planner tools for AI agents and LLMs"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/meal-planner-ai-mcp
+license: MIT
+categories: [Health, Nutrition]
+tags: [meal-planning, nutrition, recipe, diet-planning, food]
+runtime: python
+entrypoint: server.py
