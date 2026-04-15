@@ -1,0 +1,52 @@
+{
+  "name": "meal-planner-ai",
+  "description": "Plan meals, calculate nutrition, generate shopping lists, and suggest substitutes.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/meal-planner-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "plan_meals",
+      "description": "Generate a meal plan for the specified diet type and calorie target."
+    },
+    {
+      "name": "calculate_macros",
+      "description": "Calculate macronutrient totals for a list of meal names."
+    },
+    {
+      "name": "generate_shopping_list",
+      "description": "Generate a consolidated shopping list for a meal plan."
+    },
+    {
+      "name": "suggest_substitutes",
+      "description": "Suggest ingredient substitutes for dietary restrictions, allergies, or preferences."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
