@@ -1,7 +1,45 @@
 name: meal-planner-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Plan meals, calculate nutrition, generate shopping lists, and suggest
+  substitutes.
 version: 1.0.0
 tools:
-- name: generate_meal_plan
-  description: Generate a weekly meal plan
-  parameters: []
+- name: plan_meals
+  description: Generate a meal plan for the specified diet type and calorie target.
+  parameters:
+  - name: diet
+    type: string
+    required: false
+  - name: calories
+    type: integer
+    required: false
+  - name: days
+    type: integer
+    required: false
+- name: calculate_macros
+  description: Calculate macronutrient totals for a list of meal names.
+  parameters:
+  - name: meals
+    type: array
+    required: true
+  - name: diet
+    type: string
+    required: false
+- name: generate_shopping_list
+  description: Generate a consolidated shopping list for a meal plan.
+  parameters:
+  - name: diet
+    type: string
+    required: false
+  - name: days
+    type: integer
+    required: false
+- name: suggest_substitutes
+  description: Suggest ingredient substitutes for dietary restrictions, allergies,
+    or preferences.
+  parameters:
+  - name: ingredient
+    type: string
+    required: true
+  - name: reason
+    type: string
+    required: false
