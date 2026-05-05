@@ -1,54 +1,38 @@
-# Meal Planner AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Plan meals, calculate nutrition, generate shopping lists, and suggest substitutes
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/meal-planner-ai-mcp)](https://github.com/CSOAI-ORG/meal-planner-ai-mcp/stargazers)
+
+# umealU plannerU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/meal-planner-ai-mcp)](https://www.npmjs.com/package/@meok-ai/meal-planner-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/meal-planner-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install meal-planner-ai-mcp
+# or
+npm install -g @meok-ai/meal-planner-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `plan_meals`
-Generate a meal plan for the specified diet type and calorie target.
-
-**Parameters:**
-- `diet` (str): Diet type: standard, vegetarian, keto (default: "standard")
-- `calories` (int): Daily calorie target (default: 2000)
-- `days` (int): Number of days to plan (default: 7)
-
-### `calculate_macros`
-Calculate macronutrient totals for a list of meal names.
-
-**Parameters:**
-- `meals` (list[str]): List of meal names
-- `diet` (str): Diet type for database lookup (default: "standard")
-
-### `generate_shopping_list`
-Generate a consolidated, categorized shopping list for a meal plan.
-
-**Parameters:**
-- `diet` (str): Diet type (default: "standard")
-- `days` (int): Number of days (default: 7)
-
-### `suggest_substitutes`
-Suggest ingredient substitutes for dietary restrictions, allergies, or preferences.
-
-**Parameters:**
-- `ingredient` (str): Ingredient to substitute
-- `reason` (str): Reason: allergy, vegan, preference, availability (default: "preference")
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
