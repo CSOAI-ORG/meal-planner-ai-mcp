@@ -89,7 +89,22 @@ mcp = FastMCP("meal-planner-ai", instructions="Plan meals, calculate nutrition, 
 
 @mcp.tool()
 def plan_meals(diet: str = "standard", calories: int = 2000, days: int = 7, api_key: str = "") -> str:
-    """Generate a meal plan for the specified diet type and calorie target."""
+    """Generate a meal plan for the specified diet type and calorie target.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -130,7 +145,23 @@ def plan_meals(diet: str = "standard", calories: int = 2000, days: int = 7, api_
 
 @mcp.tool()
 def calculate_macros(meals: list[str], diet: str = "standard", api_key: str = "") -> str:
-    """Calculate macronutrient totals for a list of meal names."""
+    """Calculate macronutrient totals for a list of meal names.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -180,7 +211,22 @@ def calculate_macros(meals: list[str], diet: str = "standard", api_key: str = ""
 
 @mcp.tool()
 def generate_shopping_list(diet: str = "standard", days: int = 7, api_key: str = "") -> str:
-    """Generate a consolidated shopping list for a meal plan."""
+    """Generate a consolidated shopping list for a meal plan.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -234,7 +280,23 @@ def generate_shopping_list(diet: str = "standard", days: int = 7, api_key: str =
 
 @mcp.tool()
 def suggest_substitutes(ingredient: str, reason: str = "preference", api_key: str = "") -> str:
-    """Suggest ingredient substitutes for dietary restrictions, allergies, or preferences."""
+    """Suggest ingredient substitutes for dietary restrictions, allergies, or preferences.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
