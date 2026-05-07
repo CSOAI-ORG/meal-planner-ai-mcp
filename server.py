@@ -104,6 +104,13 @@ def plan_meals(diet: str = "standard", calories: int = 2000, days: int = 7, api_
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        diet (str): The diet to analyze or process.
+        calories (int): The calories to analyze or process.
+        days (int): The days to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -175,6 +182,12 @@ def calculate_macros(meals: list[str], diet: str = "standard", api_key: str = ""
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        meals (list[str]): The meals to analyze or process.
+        diet (str): The diet to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -254,6 +267,12 @@ def generate_shopping_list(diet: str = "standard", days: int = 7, api_key: str =
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        diet (str): The diet to analyze or process.
+        days (int): The days to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -338,6 +357,12 @@ def suggest_substitutes(ingredient: str, reason: str = "preference", api_key: st
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        ingredient (str): The ingredient to analyze or process.
+        reason (str): The reason to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
