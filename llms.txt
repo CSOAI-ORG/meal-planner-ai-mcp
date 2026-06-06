@@ -1,0 +1,33 @@
+# meal-planner-ai-mcp
+# **MCP server for meal planner ai mcp operations**
+
+## Install
+```bash
+pip install meal-planner-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `plan_meals`
+Generate a meal plan for the specified diet type and calorie target.
+
+### `calculate_macros`
+Calculate macronutrient totals for a list of meal names.
+
+### `generate_shopping_list`
+Generate a consolidated shopping list for a meal plan.
+
+### `suggest_substitutes`
+Suggest ingredient substitutes for dietary restrictions, allergies, or preferences.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

@@ -1,0 +1,9 @@
+# meal-planner-ai-mcp - Auto-trigger Rules
+
+When the user asks about meal planner, use meal-planner-ai-mcp tools: plan_meals, calculate_macros, generate_shopping_list, suggest_substitutes
+
+**MCP server for meal planner ai mcp operations**
+
+Install: `pip install meal-planner-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

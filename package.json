@@ -1,6 +1,6 @@
 {
   "name": "meal-planner-ai-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Meal Planner Ai tools for AI agents. Capabilities: plan meals, calculate macros, generate shopping list. Built by MEOK AI Labs.",
   "main": "server.py",
   "mcp": {

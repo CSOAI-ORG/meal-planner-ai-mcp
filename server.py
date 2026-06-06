@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — meal-planner-ai-mcp MCP Server. Generate weekly meal plans with macros and shopping lists."""
+"""
+MEOK AI Labs — meal-planner-ai-mcp MCP Server. Generate weekly meal plans with macros and shopping lists."""
 
 import json
 from datetime import datetime, timezone
@@ -7,7 +8,6 @@ from collections import defaultdict
 
 from mcp.server.fastmcp import FastMCP
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 FREE_DAILY_LIMIT = 15
@@ -128,7 +128,7 @@ def plan_meals(diet: str = "standard", calories: int = 2000, days: int = 7, api_
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     diet_key = diet.lower() if diet.lower() in MEAL_DB else "standard"
@@ -205,7 +205,7 @@ def calculate_macros(meals: list[str], diet: str = "standard", api_key: str = ""
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     diet_key = diet.lower() if diet.lower() in MEAL_DB else "standard"
@@ -290,7 +290,7 @@ def generate_shopping_list(diet: str = "standard", days: int = 7, api_key: str =
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     diet_key = diet.lower() if diet.lower() in MEAL_DB else "standard"
@@ -380,7 +380,7 @@ def suggest_substitutes(ingredient: str, reason: str = "preference", api_key: st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     lower = ingredient.lower()
@@ -415,5 +415,8 @@ def suggest_substitutes(ingredient: str, reason: str = "preference", api_key: st
     }, indent=2)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

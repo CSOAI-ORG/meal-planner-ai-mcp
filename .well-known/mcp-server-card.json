@@ -1,0 +1,25 @@
+{
+  "name": "meal-planner-ai-mcp",
+  "title": "Meal Planner Ai Mcp",
+  "description": "Meal Planner Ai tools for AI agents. Capabilities: plan meals, calculate macros, generate shopping list. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "plan_meals"
+    },
+    {
+      "name": "calculate_macros"
+    },
+    {
+      "name": "generate_shopping_list"
+    },
+    {
+      "name": "suggest_substitutes"
+    }
+  ]
+}
