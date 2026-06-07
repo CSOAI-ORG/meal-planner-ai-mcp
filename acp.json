@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "meal-planner-ai-mcp",
+    "description": "Meal Planner Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "meal-planner-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "plan_meals",
+      "calculate_macros",
+      "generate_shopping_list",
+      "suggest_substitutes"
+    ]
+  }
+}

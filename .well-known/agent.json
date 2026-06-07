@@ -1,0 +1,59 @@
+{
+  "name": "meal-planner-ai-mcp",
+  "description": "Meal Planner Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/meal-planner-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "plan_meals",
+      "name": "Plan Meals",
+      "description": "plan_meals via meal-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_macros",
+      "name": "Calculate Macros",
+      "description": "calculate_macros via meal-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_shopping_list",
+      "name": "Generate Shopping List",
+      "description": "generate_shopping_list via meal-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_substitutes",
+      "name": "Suggest Substitutes",
+      "description": "suggest_substitutes via meal-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
